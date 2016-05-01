@@ -23,7 +23,7 @@ module.exports = function makeRemoveFormatting (state) {
           break
 
         case '!':
-          if (link in reservedKeywords) return `@${link}`
+          if (reservedKeywords.includes(link)) return `@${link}`
           break
 
         default:

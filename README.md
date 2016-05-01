@@ -1,4 +1,4 @@
-# Remove [Slack][slack] message [formatting][formatting].
+# Remove [Slack][slack] message [formatting][formatting] [![npm version](http://img.shields.io/npm/v/slack-remove-formatting.svg?style=flat-square)](https://www.npmjs.org/package/slack-remove-formatting)
 
 [slack]: https://slack.com/
 [formatting]: https://api.slack.com/docs/formatting

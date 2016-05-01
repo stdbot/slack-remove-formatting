@@ -1,0 +1,22 @@
+{
+  "name": "slack-remove-formatting",
+  "version": "0.1.0",
+  "description": "Remove Slack message formatting.",
+  "keywords": [
+    "slack"
+  ],
+  "homepage": "https://github.com/stdbot/slack-remove-formatting",
+  "bugs": "https://github.com/stdbot/slack-remove-formatting/issues",
+  "license": "Unlicense",
+  "author": {
+    "name": "Valérian Galliat",
+    "url": "https://val.codejam.info/"
+  },
+  "repository": "stdbot/slack-remove-formatting",
+  "scripts": {
+    "lint": "standard"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1"
+  }
+}

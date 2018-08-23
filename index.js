@@ -3,9 +3,9 @@ const reservedKeywords = ['channel', 'group', 'everyone', 'here']
 const indexBy = (prop, items) =>
   items.reduce((index, item) => (index[item[prop]] = item, index), {})
 
-module.exports = function makeRemoveFormatting (state) {
-  const users = indexBy('id', state.users)
-  const channels = indexBy('id', state.channels)
+module.exports = function makeRemoveFormatting (users, channels) {
+  users = indexBy('id', users)
+  channels = indexBy('id', channels)
 
   return function removeFormatting (text) {
     text = text.replace(/<([@#!])?([^>|]+)(?:\|([^>]+))?>/g, (m, type, link, label) => {
@@ -13,7 +13,7 @@ module.exports = function makeRemoveFormatting (state) {
         case '@':
           if (label) return label
           const user = users[link]
-          if (user) return `@${user.name}`
+          if (user) return `@${user.real_name}`
           break
 
         case '#':
